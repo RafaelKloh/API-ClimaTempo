@@ -2,8 +2,9 @@ const requestOptions = {
   method: 'GET',
   redirect: 'follow'
 };
+const url = "http://apiadvisor.climatempo.com.br/api/v1/weather/locale/5616/current?token=90b44b5ace3f28eebd306937d425a0b5"
 
-fetch("http://apiadvisor.climatempo.com.br/api/v1/weather/locale/5616/current?token=90b44b5ace3f28eebd306937d425a0b5", requestOptions)
+fetch(url, requestOptions, {mode:'no-cors'})
   .then(response => response.json())
   .then(tempoJson => {
     console.log(tempoJson);
